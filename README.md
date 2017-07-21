@@ -47,7 +47,7 @@ o.publish('foo') // do nothing!!
 
 Initialize an Ovv instance.
 
-### .subscribe(*`fn`*)
+### .subscribe(*fn*)
 
 <small>argument:</small>
 - *`fn`* - Function
@@ -57,7 +57,7 @@ Initialize an Ovv instance.
 
 Regist *`fn`* to the queue and return *`unsubscribe`* function.
 
-### .publish(*`value`*)
+### .publish(*value*)
 
 <small>argument:</small>
 - *`value`* - Any Type
