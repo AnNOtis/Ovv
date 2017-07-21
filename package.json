@@ -1,9 +1,9 @@
 {
-  "name": "Ovv",
+  "name": "ovv",
   "description": "Simple pub/sub libary",
   "repository": "https://github.com/AnNOtis/Ovv",
   "author": "AnNOtis",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "index.js",
   "scripts": {
     "test": "standard & ava --color"
