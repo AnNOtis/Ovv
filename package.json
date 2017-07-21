@@ -3,7 +3,7 @@
   "description": "Simple pub/sub libary",
   "repository": "https://github.com/AnNOtis/Ovv",
   "author": "AnNOtis",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "standard & ava --color"
