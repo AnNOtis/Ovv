@@ -1,5 +1,8 @@
 {
   "name": "Ovv",
+  "description": "Simple pub/sub libary",
+  "repository": "https://github.com/AnNOtis/Ovv",
+  "author": "AnNOtis",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {

@@ -1,6 +1,6 @@
 # Ovv
 
-> simple pub/sub libary
+> Simple pub/sub libary
 
 ## Install
 
@@ -11,59 +11,71 @@ yarn install Ovv
 ## Usage
 
 ```js
-var Ovv = require('Ovv')
+import Ovv from 'Ovv'
 
-/** Subscribe once **//
-var o = new Ovv
-o.subscribe(function (msg) { console.log(msg) })
-o.publish('foo')
-// => 'foo'
-
-/** Subscribe multiple times **/
-var o = new Ovv
-o.subscribe(function (msg) { console.log('Observer 1:', msg) })
-o.subscribe(function (msg) { console.log('Observer 2:', msg) })
+let o = new Ovv
+o.subscribe(msg => { console.log('Observer 1:', msg) })
+o.subscribe(msg => { console.log('Observer 2:', msg) })
 o.publish('foo')
 // => 'Observer 1:', 'foo'
 // => 'Observer 2:', 'foo'
 
+
 /** Unsubscribe - by return value **/
-var o = new Ovv
-var cancel = o.subscribe(function (msg) { console.log(mdg) })
+let o = new Ovv
+const cancel = o.subscribe(msg => { console.log(msg) })
 cancel()
 o.publish('foo') // do nothing!!
 
+
 /** Unsubscribe - by unsubscribe() **/
-var o = new Ovv
-var logger = function (msg) { console.log(mdg) }
+let o = new Ovv
+const logger = msg => { console.log(msg) }
 o.subscribe(logger)
 o.unsubscribe(logger)
 o.publish('foo') // do nothing!!
 ```
 
-### API
+## API
 
-**new Ovv()** - return instance
+### new Ovv( )
 
-**.subscribe(*`fn`*)** - return *`unsubscribe`*
+<small>return:</small>
+- *`instance`* - Ovv
 
+Initialize an Ovv instance.
+
+### .subscribe(*`fn`*)
+
+<small>argument:</small>
 - *`fn`* - Function
 
+<small>return:</small>
 - *`unsubscribe`* - Function
 
-Regist *`fn`* to the queue and return *`unsubscribe`* function
+Regist *`fn`* to the queue and return *`unsubscribe`* function.
 
-**.publish(*`value`*)** - return undefined
+### .publish(*`value`*)
 
+<small>argument:</small>
 - *`value`* - Any Type
 
 Pass *`value`* to all *`fn`* s in the queue
 
-**.unsubscribe(*fn*)**
+### .unsubscribe(*fn*)
 
+<small>argument:</small>
 - *`fn`* - Function
 
-Cancel specific subscription
+Cancel the specific subscription.
+
+```js
+const logger = (msg) => { console.log(msg) }
+o.subscribe(logger)
+
+o.unsubscribe(logger)
+o.publish('foo') // do nothing!!
+```
 
 ## License
 
