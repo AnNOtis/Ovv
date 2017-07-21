@@ -7,7 +7,7 @@
 ## Install
 
 ```sh
-yarn install Ovv
+yarn install ovv
 ```
 
 ## Usage
