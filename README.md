@@ -2,9 +2,11 @@
 
 > Simple pub/sub libary
 
+[![Build Status](https://travis-ci.org/AnNOtis/Ovv.svg?branch=master)](https://travis-ci.org/AnNOtis/Ovv)
+
 ## Install
 
-```
+```sh
 yarn install Ovv
 ```
 

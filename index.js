@@ -21,7 +21,7 @@ Ovv.prototype.publish = function () {
 Ovv.prototype.unsubscribe = function (fn) {
   const index = this._queue.indexOf(fn)
 
-  this._queue = [...this._queue.slice(0, index), ...this._queue.slice(index + 1)]
+  this._queue = this._queue.slice(0, index).concat(this._queue.slice(index + 1))
 }
 
 module.exports = Ovv
