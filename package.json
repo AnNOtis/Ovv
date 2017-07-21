@@ -1,0 +1,13 @@
+{
+  "name": "Ovv",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard & ava --color"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.21.0",
+    "standard": "^10.0.2"
+  }
+}
